@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Beos.OnMuhasebe</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Beos.OnMuhasebe.EntityFrameworkCore\Beos.OnMuhasebe.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\Beos.OnMuhasebe.Application.Tests\Beos.OnMuhasebe.Application.Tests.csproj" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="9.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.1.0" />
+  </ItemGroup>
+
+</Project>
