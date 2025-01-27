@@ -16,7 +16,7 @@ public class Stok : FullAuditedAggregateRoot<Guid>
     public OzelKod OzelKod1 { get; set; }
     public OzelKod OzelKod2{ get; set; }
 
-    ICollection<FaturaHareket> FaturaHareketler { get; set; }
+    public ICollection<FaturaHareket> FaturaHareketler { get; set; }
 
 
 }

@@ -46,4 +46,16 @@ public class OzelKod : FullAuditedAggregateRoot<Guid>
     public ICollection<Masraf> OzelKod1Masraflar { get; set; }
     public ICollection<Masraf> OzelKod2Masraflar { get; set; }
 
+    public ICollection<Il> OzelKod1Iller { get; set; }
+    public ICollection<Il> OzelKod2Iller { get; set; }
+
+    public ICollection<Ilce> OzelKod1Ilceler { get; set; }
+    public ICollection<Ilce> OzelKod2Ilceler { get; set; }
+
+    public ICollection<Mahalle> OzelKod1Mahalleler { get; set; }
+    public ICollection<Mahalle> OzelKod2Mahalleler { get; set; }
+
+    public ICollection<Firma> OzelKod1Firmalar { get; set; }
+    public ICollection<Firma> OzelKod2Firmalar { get; set; }
+
 }

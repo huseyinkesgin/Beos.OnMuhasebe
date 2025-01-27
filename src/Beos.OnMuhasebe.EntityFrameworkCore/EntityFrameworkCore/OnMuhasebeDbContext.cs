@@ -3,12 +3,17 @@ using Beos.OnMuhasebe.Bankalar;
 using Beos.OnMuhasebe.BankaSubeler;
 using Beos.OnMuhasebe.Birimler;
 using Beos.OnMuhasebe.Cariler;
+using Beos.OnMuhasebe.Configurations;
 using Beos.OnMuhasebe.Consts;
 using Beos.OnMuhasebe.Depolar;
 using Beos.OnMuhasebe.Donemler;
 using Beos.OnMuhasebe.Faturalar;
+using Beos.OnMuhasebe.Firmalar;
 using Beos.OnMuhasebe.Hizmetler;
+using Beos.OnMuhasebe.Ilceler;
+using Beos.OnMuhasebe.Iller;
 using Beos.OnMuhasebe.Kasalar;
+using Beos.OnMuhasebe.Mahalleler;
 using Beos.OnMuhasebe.Makbuzlar;
 using Beos.OnMuhasebe.Masraflar;
 using Beos.OnMuhasebe.OzelKodlar;
@@ -70,8 +75,7 @@ public class OnMuhasebeDbContext :
     public DbSet<Tenant> Tenants { get; set; }
     public DbSet<TenantConnectionString> TenantConnectionStrings { get; set; }
 
-    #endregion
-
+  
 
     public DbSet<Banka> Bankalar { get; set; }
     public DbSet<BankaSube> BankaSubeler { get; set; }
@@ -89,8 +93,12 @@ public class OnMuhasebeDbContext :
     public DbSet<OzelKod> OzelKodlar { get; set; }
     public DbSet<Stok> Stoklar { get; set; }
     public DbSet<Sube> Subeler { get; set; }
-    
-   
+    public DbSet<Il> Iller { get; set; }
+    public DbSet<Ilce> Ilceler { get; set; }
+    public DbSet<Mahalle> Mahalleler { get; set; }
+    public DbSet<Firma> Firmalar { get; set; }
+    #endregion
+
     public OnMuhasebeDbContext(DbContextOptions<OnMuhasebeDbContext> options)
         : base(options)
     {
@@ -114,6 +122,29 @@ public class OnMuhasebeDbContext :
 
         /* Configure your own tables/entities inside here */
 
-       
+        builder.ConfigureBanka();
+        builder.ConfigureBankaSube();
+        builder.ConfigureBankaHesap();
+        //builder.ConfigureBirim();
+        //builder.ConfigureCari();
+        //builder.ConfigureDepo();
+        //builder.ConfigureDonem();
+        //builder.ConfigureFatura();
+        //builder.ConfigureFaturaHareket();
+        //builder.ConfigureFirmaParametre();
+        //builder.ConfigureHizmet();
+        //builder.ConfigureKasa();
+        //builder.ConfigureMakbuz();
+        //builder.ConfigureMakbuzHareket();
+        //builder.ConfigureMasraf();
+        builder.ConfigureOzelKod();
+        //builder.ConfigureStok();
+        //builder.ConfigureSube();
+        //builder.ConfigureIl();
+        //builder.ConfigureIlce();
+        //builder.ConfigureMahalle();
+        //builder.ConfigureFirma();
+
+
     }
 }
