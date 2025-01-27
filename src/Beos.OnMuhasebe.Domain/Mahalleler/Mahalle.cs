@@ -1,4 +1,6 @@
-﻿namespace Beos.OnMuhasebe.Mahalleler;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Beos.OnMuhasebe.Mahalleler;
 public class Mahalle : FullAuditedAggregateRoot<Guid>
 {
     public string Kod { get; set; }
@@ -11,7 +13,9 @@ public class Mahalle : FullAuditedAggregateRoot<Guid>
 
 
     public Ilce Ilce { get; set; }
+    [NotMapped]
     public OzelKod OzelKod1 { get; set; }
+    [NotMapped]
     public OzelKod OzelKod2 { get; set; }
 
     public ICollection<Firma> Firmalar { get; set; }

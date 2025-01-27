@@ -1,4 +1,6 @@
-﻿namespace Beos.OnMuhasebe.Makbuzlar;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Beos.OnMuhasebe.Makbuzlar;
 public class Makbuz : FullAuditedAggregateRoot<Guid>
 {
     public MakbuzTuru MakbuzTuru { get; set; }
@@ -24,7 +26,9 @@ public class Makbuz : FullAuditedAggregateRoot<Guid>
     public Cari Cari { get; set; }
     public Kasa Kasa { get; set; }
     public BankaHesap BankaHesap { get; set; }
+    [NotMapped]
     public OzelKod OzelKod1 { get; set; }
+    [NotMapped]
     public OzelKod OzelKod2 { get; set; }
     public Sube Sube { get; set; }
     public Donem Donem { get; set; }

@@ -1,4 +1,6 @@
-﻿namespace Beos.OnMuhasebe.Hizmetler;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Beos.OnMuhasebe.Hizmetler;
 public class Hizmet : FullAuditedAggregateRoot<Guid>
 {
     public string Kod { get; set; }
@@ -13,7 +15,9 @@ public class Hizmet : FullAuditedAggregateRoot<Guid>
     public bool Durum { get; set; }
 
     public Birim Birim { get; set; }
+    [NotMapped]
     public OzelKod OzelKod1 { get; set; }
+    [NotMapped]
     public OzelKod OzelKod2 { get; set; }
 
     public ICollection<FaturaHareket> FaturaHareketler { get; set; }

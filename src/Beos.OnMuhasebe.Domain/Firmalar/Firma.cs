@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +31,9 @@ public class Firma : AuditedAggregateRoot<Guid>
     public Ilce Ilce { get; set; }
     public Mahalle Mahalle { get; set; }
 
+    [NotMapped]
     public OzelKod OzelKod1 { get; set; }
+    [NotMapped]
     public OzelKod OzelKod2 { get; set; }
 
 }

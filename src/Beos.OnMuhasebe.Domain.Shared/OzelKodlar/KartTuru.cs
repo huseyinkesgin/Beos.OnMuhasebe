@@ -1,8 +1,9 @@
 ﻿namespace Beos.OnMuhasebe.OzelKodlar;
 public enum KartTuru
 {
-    Birim = 1,
-    Stok = 2,
+   
+    Stok = 1,
+    Birim = 2,
     Cari = 3,
     OzelKod = 4,
     Fatura = 5,
@@ -14,5 +15,9 @@ public enum KartTuru
     Hizmet = 11,
     Masraf = 12,
     Makbuz = 13,
+    Il = 14,
+    Ilce = 15,
+    Mahalle = 16,
+    Firma = 17
 
 }

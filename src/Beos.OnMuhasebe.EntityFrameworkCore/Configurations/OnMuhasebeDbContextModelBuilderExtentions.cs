@@ -1062,6 +1062,7 @@ public static class OnMuhasebeDbContextModelBuilderExtentions
             b.HasIndex(x => x.Kod);
 
             //relations
+         
         });
     }
 

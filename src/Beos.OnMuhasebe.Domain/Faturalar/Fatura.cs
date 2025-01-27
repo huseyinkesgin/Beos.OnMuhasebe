@@ -1,4 +1,6 @@
-﻿namespace Beos.OnMuhasebe.Faturalar;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Beos.OnMuhasebe.Faturalar;
 public class Fatura : FullAuditedAggregateRoot<Guid>
 {
     public FaturaTuru FaturaTuru { get; set; }
@@ -19,7 +21,9 @@ public class Fatura : FullAuditedAggregateRoot<Guid>
     public bool Durum { get; set; }
 
     public Cari Cari { get; set; }
+    [NotMapped]
     public OzelKod OzelKod1 { get; set; }
+    [NotMapped]
     public OzelKod OzelKod2 { get; set; }
     public Sube Sube { get; set; }
     public Donem Donem { get; set; }

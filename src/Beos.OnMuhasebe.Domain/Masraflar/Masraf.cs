@@ -1,4 +1,6 @@
-﻿namespace Beos.OnMuhasebe.Masraflar;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Beos.OnMuhasebe.Masraflar;
 public class Masraf : FullAuditedAggregateRoot<Guid>
 {
     public string Kod { get; set; }
@@ -14,7 +16,9 @@ public class Masraf : FullAuditedAggregateRoot<Guid>
 
 
     public Birim Birim { get; set; }
+    [NotMapped]
     public OzelKod OzelKod1 { get; set; }
+    [NotMapped]
     public OzelKod OzelKod2 { get; set; }
 
     public ICollection<FaturaHareket> FaturaHareketler { get; set; }
