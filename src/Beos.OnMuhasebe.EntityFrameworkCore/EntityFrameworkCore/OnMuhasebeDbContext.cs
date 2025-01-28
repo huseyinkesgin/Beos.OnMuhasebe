@@ -97,6 +97,9 @@ public class OnMuhasebeDbContext :
     public DbSet<Ilce> Ilceler { get; set; }
     public DbSet<Mahalle> Mahalleler { get; set; }
     public DbSet<Firma> Firmalar { get; set; }
+
+    public DbSet<FaturaHareket> FaturaHareketler { get; set; }
+    public DbSet<MakbuzHareket> MakbuzHareketler { get; set; }
     #endregion
 
     public OnMuhasebeDbContext(DbContextOptions<OnMuhasebeDbContext> options)
@@ -125,25 +128,25 @@ public class OnMuhasebeDbContext :
         builder.ConfigureBanka();
         builder.ConfigureBankaSube();
         builder.ConfigureBankaHesap();
-        //builder.ConfigureBirim();
-        //builder.ConfigureCari();
-        //builder.ConfigureDepo();
-        //builder.ConfigureDonem();
-        //builder.ConfigureFatura();
-        //builder.ConfigureFaturaHareket();
-        //builder.ConfigureFirmaParametre();
-        //builder.ConfigureHizmet();
-        //builder.ConfigureKasa();
-        //builder.ConfigureMakbuz();
-        //builder.ConfigureMakbuzHareket();
-        //builder.ConfigureMasraf();
+        builder.ConfigureBirim();
+        builder.ConfigureCari();
+        builder.ConfigureDepo();
+        builder.ConfigureDonem();
+        builder.ConfigureFatura();
+        builder.ConfigureFaturaHareket();
+        builder.ConfigureFirmaParametre();
+        builder.ConfigureHizmet();
+        builder.ConfigureKasa();
+        builder.ConfigureMakbuz();
+        builder.ConfigureMakbuzHareket();
+        builder.ConfigureMasraf();
         builder.ConfigureOzelKod();
-        //builder.ConfigureStok();
-        //builder.ConfigureSube();
-        //builder.ConfigureIl();
-        //builder.ConfigureIlce();
-        //builder.ConfigureMahalle();
-        //builder.ConfigureFirma();
+        builder.ConfigureStok();
+        builder.ConfigureSube();
+        builder.ConfigureIl();
+        builder.ConfigureIlce();
+        builder.ConfigureMahalle();
+        builder.ConfigureFirma();
 
 
     }

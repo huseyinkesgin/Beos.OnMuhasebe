@@ -12,14 +12,22 @@ public class OnMuhasebeDbContextFactory : IDesignTimeDbContextFactory<OnMuhasebe
 {
     public OnMuhasebeDbContext CreateDbContext(string[] args)
     {
-        OnMuhasebeEfCoreEntityExtensionMappings.Configure();
+        try
+        {
+            OnMuhasebeEfCoreEntityExtensionMappings.Configure();
 
-        var configuration = BuildConfiguration();
+            var configuration = BuildConfiguration();
 
-        var builder = new DbContextOptionsBuilder<OnMuhasebeDbContext>()
-            .UseSqlServer(configuration.GetConnectionString("Default"));
+            var builder = new DbContextOptionsBuilder<OnMuhasebeDbContext>()
+                .UseSqlServer(configuration.GetConnectionString("Default"));
 
-        return new OnMuhasebeDbContext(builder.Options);
+            return new OnMuhasebeDbContext(builder.Options);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.ToString());
+            throw;
+        }
     }
 
     private static IConfigurationRoot BuildConfiguration()

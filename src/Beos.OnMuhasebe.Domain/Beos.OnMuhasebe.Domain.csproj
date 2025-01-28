@@ -25,12 +25,4 @@
     <PackageReference Include="Volo.Abp.PermissionManagement.Domain.OpenIddict" Version="9.0.4" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Arsalar\" />
-    <Folder Include="Konutlar\" />
-    <Folder Include="Personeller\" />
-    <Folder Include="İşyerleri\" />
-    <Folder Include="Portfoyler\" />
-  </ItemGroup>
-
 </Project>
